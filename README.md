@@ -7,3 +7,6 @@ Una red de comumnicación basada en la nube que permite a los almacenes confirma
 ## Lógica de negocio:
 Esta aplicación ayudará a disminuir el tiempo y dinero que se suelen perder cuando ocurre este tipo de problemas. 
 
+## Documentación adicional
+[Configuración git](Objetivo0/Screenshot from 2022-09-16 15-32-02.png)
+

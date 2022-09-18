@@ -1,12 +1,9 @@
 ## Problema:
-Muchos grandes almacenes tienen problemas cuando reciben mercancías desde sus proveedores: error en cuanto a la cantidad recibida, productos defectuosos, daños ocasionados durante el transporte, etc.
+Una buena planificación es siempre útil para no perder el tiempo de disfrutar y pasar unas buenas vacaciones. Sin embargo, esto no es siempre fácil por el posible desconocimiento sobre el lugar donde se viaja y las distintas necesidades que tiene cada turista.
 
-## Solución propuesta:
-Una red de comumnicación basada en la nube que permite a los almacenes confirmar el estado de las mercancías recibidas (con la confirmación del transportista para evitar conflictos) y notificar al instante al proveedor. Lo que permitirá a los proveedores confirmar el estado y llegada de sus envíos y realizar cambios en las facturas correspondientes si es necesario.
-
-## Lógica de negocio:
-Esta aplicación ayudará a disminuir el tiempo y dinero que se suelen perder cuando ocurre este tipo de problemas. 
+## Propuesta:
+Una aplicación que analiza las necesidades de los clientes (el tiempo de estancia, los lugares que quieren visitar, las actividades que quieren realizar) para generar itinerarios que puedan serles útiles para sus viajes.
 
 ## Documentación adicional
-[Configuración git](Objetivo0/Screenshot from 2022-09-16 15-32-02.png)
-
+[Configuración git](Objetivo0/config%20git.png)
+[Creación y subida de clave pública a GitHub](Objetivo0/claveSSH.png)

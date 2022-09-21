@@ -1,5 +1,5 @@
 ## Problema:
-Los gimnasios suelen tener para cada semana, un horario de actividades (yoga, clases de boxeo, etc) que se impartirán. Pero para planificar dicho horario, es necesario tener en cuenta la disponibilidad de los profesores, la hora con más afluencia, el tipo de actividad en concreto, la duración, etc. Además, interesa saber la popularidad de una actividad tras su impartición para las futuras organizaciones de actividades.
+Los trabajadores de gimnasios tienen que planificar para cada semana, un horario de actividades (yoga, clases de boxeo, etc) que se impartirán interesante y ajustado con el fin de atraer a sus clientes y fomentar sus permanencias en el gimnasio. Pero para organizar las actividades, es necesario tener en cuenta la disponibilidad de los profesores, la hora con mayor afluencia, el tipo de actividad en concreto, la duración, etc. 
 
 
 ## Documentación adicional

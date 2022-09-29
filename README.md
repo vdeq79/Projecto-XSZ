@@ -7,4 +7,11 @@ A partir de un conjunto de animes vistos (viendo actualmente, completado, dejado
 
 ## Documentación adicional
 [Configuración git](docs/Objetivo0/config%20git.png)
+
 [Creación y subida de clave pública a GitHub](docs/Objetivo0/claveSSH.png)
+
+[Personas creadas](docs/Objetivo1/personas.md)
+
+[Historias de usuario](docs/Objetivo1/user-stories.md)
+
+[Milestones](docs/Objetivo1/milestone.md)

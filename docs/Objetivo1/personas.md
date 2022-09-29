@@ -7,7 +7,7 @@ Estudiante de turismo y cosplayer, 21 años, aficionada al mundo del anime desde
 
 ## Alejandro Muñoz
 
-Estudiante de ingeniería informática, 18 años, recién entrado en la carrera. Su contacto con el anime ha sido simplemente los dibujos que ha visto en la televisión desde su infancia y conocimiento vago sobre títulos como One Piece y Naruto. Siempre ha sido más fan de las series y películas pero ahora también quiere ver algunos animes.
+Estudiante de ingeniería informática, 18 años, recién entrado en la carrera. Su contacto con el anime ha sido simplemente los dibujos que ha visto en la televisión desde su infancia y algunos episodios de One Piece. Siempre ha sido más fan de las series y películas pero ahora también quiere ver algunos animes.
 
 
 ## Álvaro Fernández

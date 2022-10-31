@@ -18,3 +18,9 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 [Gestor de dependencias](docs/documentations/gestor-de-dependencias.md)
 
 [Gestor de tareas](docs/documentations/gestor-de-tareas.md)
+
+## Orden de chequeo
+Para el chequeo del sintaxis se utilizará:
+```shell
+grunt check
+```

@@ -1,0 +1,9 @@
+lenguaje: TypeScript
+
+objeto valor: #Por determinar
+
+entidad:  #Por determinar
+
+automatizar:
+  fichero: Gruntfile.js
+  orden: grunt

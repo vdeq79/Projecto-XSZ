@@ -1,17 +1,16 @@
-## Problema:
-Para las personas que ven animes al acabar una serie o que empiezan a verlos es muy frecuente que no sepan que ver. Encontrar un título que se ajuste a sus gustos y que merezca la pena a veces es trabajoso.
+## Descripción:
+Proyecto-XSZ es una aplicación en la nube orientado a recomendar animes para usuarios a partir de los títulos que estos han visto.
 
-#### Propuesta:
-A partir de un conjunto de animes vistos (viendo actualmente, completado, dejado, etc) introducidas por el usuario (usando APIs como por ejemplo Jikan), predecir (mediante un algoritmo de recommendación, por ejemplo: algoritmo de conjuntos frecuentes) cuáles son las series que les puedan interesar a partir de género, director, guionista, casts, etc; de las series ya vistas. 
-
+## Funcionamiento:
+Apartir de la lista de animes proporcionado por el usuario, aplicando el algoritmo de conjuntos frecuentes se generará una lista de animes no vistos que se aproxime a las preferencias del usuario.
 
 ## Documentación adicional
-[Configuración git](docs/Objetivo0/config%20git.png)
+[Configuración git](docs/screenshots/config%20git.png)
 
-[Creación y subida de clave pública a GitHub](docs/Objetivo0/claveSSH.png)
+[Creación y subida de clave pública a GitHub](docs/screenshots/claveSSH.png)
 
-[Personas creadas](docs/Objetivo1/personas.md)
+[Personas creadas](docs/documentations/personas.md)
 
-[Historias de usuario](docs/Objetivo1/user-stories.md)
+[Historias de usuario](docs/documentations/user-stories.md)
 
-[Milestones](docs/Objetivo1/milestone.md)
+[Milestones](docs/documentations/milestone.md)

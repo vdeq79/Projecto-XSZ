@@ -15,4 +15,6 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 
 [Milestones](docs/documentations/milestone.md)
 
+[Gestor de dependencias](docs/documentations/gestor-de-dependencias.md)
+
 [Gestor de tareas](docs/documentations/gestor-de-tareas.md)

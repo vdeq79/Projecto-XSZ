@@ -14,3 +14,5 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 [Historias de usuario](docs/documentations/user-stories.md)
 
 [Milestones](docs/documentations/milestone.md)
+
+[Gestor de tareas](docs/documentations/gestor-de-tareas.md)

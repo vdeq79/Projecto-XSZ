@@ -1,2 +1,2 @@
 lenguaje: TypeScript
-entidad: path/lista_usuario.ts
+entidad: src/user_list.ts

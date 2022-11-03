@@ -1,4 +1,4 @@
-class Anime{
+export class Anime{
     titles: {[type:string]: string}; //Títulos en distintos idiomas
     synopsis: string; //Sinopsis
     episodes: number; //Num episodios

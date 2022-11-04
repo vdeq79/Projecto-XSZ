@@ -1,9 +1,9 @@
 import { Anime } from "./anime"
 
 class UserList{
-    animes_user: Anime[];
+    animesUser: Anime[];
 
-    constructor(animes_user:Anime[]){
-        this.animes_user = animes_user
+    constructor(animesUser:Anime[]){
+        this.animesUser = animesUser
     }
 }

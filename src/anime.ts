@@ -9,7 +9,7 @@ export class Anime{
     broadcast: Date; //Día de la semana que se lanza.
 
     constructor(
-        titles: {[type:string]: string},
+        titles: {[language:string]: string},
         synopsis: string,
         episodes: number,
         type: string,

@@ -2,14 +2,12 @@
     "name": "proyecto-xsz",
     "version": "v3.1",
     "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.41.0",
-        "@typescript-eslint/parser": "^5.41.0",
-        "eslint": "^8.26.0",
         "grunt": "^1.5.3",
         "grunt-contrib-jshint": "^3.2.0",
         "grunt-contrib-nodeunit": "^4.0.0",
-        "grunt-contrib-uglify": "^5.2.2",
-        "grunt-eslint": "^24.0.0",
-        "load-grunt-tasks": "^5.1.0"
+        "grunt-contrib-uglify": "^5.2.2"
+    },
+    "dependencies": {
+        "grunt-cli": "^1.4.3"
     }
 }

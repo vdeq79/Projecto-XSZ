@@ -1,7 +1,8 @@
 lenguaje: TypeScript
 
 
-entidad:  #por determinar
+entidad:  
+  - src/user_list.ts
 
 automatizar:
   fichero: Gruntfile.js

@@ -1,6 +1,7 @@
 lenguaje: TypeScript
 
-entidad:  #Por determinar
+
+entidad:  #por determinar
 
 automatizar:
   fichero: Gruntfile.js

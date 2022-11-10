@@ -3,7 +3,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         shell:{
             check:{
-                command: 'deno check --reload ./src/*.ts'
+                command: 'deno check ./src/*.ts'
             }
         }
     });

@@ -1,6 +1,7 @@
-Para el gestor de tareas, el criterio que se ha impuesto es la cantidad de plugins (lo que les permiten realizar tareas) que tienen y se ha tenido en cuenta las siguientes posibilidades:
+Para el gestor de tareas, el criterio que se ha impuesto es la variedad de tareas que pueden hacer ( en algunos casos, plugins que les permiten realizar tareas) y se ha tenido en cuenta las siguientes posibilidades:
 
-- **Grunt**: es una herramienta que permite simplificar el proceso de construcción de proyectos. Permite tareas como control de calidad (JSLint), la ofuscación, compilación o testing de unidades, entre otros. A día de hoy, tiene 6250 plugins. 
-- **Gulp**: aprovecha de la flexibilidad de JavaScript, es simple, eficiente y proporciona rapidez y precisión. A día de hoy, tiene 4249 plugins, ligeramente menor que Grunt sin embargo no es escaso.
+- **Grunt**: es una herramienta que permite simplificar el proceso de construcción de proyectos. Permite tareas como control de calidad (JSLint), la ofuscación, compilación o testing de unidades, entre otros. A día de hoy, tiene 6250 plugins que definen tareas tales que sólo hay que configurarlos para utilizarlos. 
+- **Gulp**: aprovecha de la flexibilidad de JavaScript, es simple, eficiente y proporciona rapidez y precisión. Define las tareas a partir de declaraciones de funciones de JavaScript en un fichero llamado Gulpfile.fs. A día de hoy, tiene 4249 plugins, ligeramente menor que Grunt, sin embargo no es escaso.
+- **Make**: es una herramienta general que aparte de generar archivos a partir de otros y permite realizar otras operaciones como ejecutar otras herramientas o comandos. A diferencia de gulp o grunt, no necesita plugins o runtime de JavaScript, por ello, no tiene funcionalidades particulares dedicadas al desarrollo de un proyecto de JavaScript.
 
-Finalmente se ha optado por utilizar Grunt por su completitud y robustez.
+Finalmente se ha optado por utilizar Grunt por tener una base amplia de plugins orientados a JavaScript y ser más fácil de utilizar porque requiere más configuración que programación.

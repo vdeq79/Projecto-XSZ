@@ -1,0 +1,9 @@
+lenguaje: TypeScript
+
+
+entidad:  
+  - src/user_list.ts
+
+automatizar:
+  fichero: Gruntfile.js
+  orden: grunt

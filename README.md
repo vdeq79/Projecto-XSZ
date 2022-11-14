@@ -18,3 +18,13 @@ A partir de un conjunto de animes vistos (viendo actualmente, completado, dejado
 
 ## Análisis elección Entidad
 Atendiendo a lo puesto en #2, #3 y #4 se ha considerado que únicamente se requiere de una entidad, user_list, la cual será la que implemente la lógica de negocio. Esta entidad se trata de una lista de animes que el usuario ha visto o está viendo, y a partir de la cual se va a implementear el algoritmo de recomendación para cumplir con las necesidades de #2, #3 y #4.
+
+## Análisis elección Objeto Valor
+Por otro lado para el objeto valor se ha considerado únicamente Anime, que con los atributos necesario debe cumplir las necesidades de #3, #4 y #5. Por lo discutido en #15 se han considerado los siguientes atritubutos:
+- Title: se recoje el título en un objeto de tipo diccionario que contendra el idioma del título y el título en dicho idioma.
+- Synopsis: se trata de una descripción del anime en cuestión.
+- Type: un anime puede ser una serie, una película, un especial, etc.
+- Status: terminado, en emisión, cancelado,...
+- Generos: cada anime tendrá asociado uno o varios géneros que posteriormente se podrán usar para crear un perfil de gustos del usuario
+- Year: año de lanzamiento del anime
+- Broadcast: fecha de salida (día de la semana) de cada episodio. Generalmente, los animes se suelen emitir un día fijo de la semana, aunque se pueden producir variacioens por vacaciones u otros motivos.

@@ -15,3 +15,6 @@ A partir de un conjunto de animes vistos (viendo actualmente, completado, dejado
 [Historias de usuario](docs/Objetivo1/user-stories.md)
 
 [Milestones](docs/Objetivo1/milestone.md)
+
+## Análisis elección Entidad
+Atendiendo a lo puesto en #2, #3 y #4 se ha considerado que únicamente se requiere de una entidad, user_list, la cual será la que implemente la lógica de negocio. Esta entidad se trata de una lista de animes que el usuario ha visto o está viendo, y a partir de la cual se va a implementear el algoritmo de recomendación para cumplir con las necesidades de #2, #3 y #4.

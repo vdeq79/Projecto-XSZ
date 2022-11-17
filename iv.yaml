@@ -1,6 +1,5 @@
 lenguaje: TypeScript
 
-
 entidad:  
   - src/user_list.ts
 

@@ -6,9 +6,10 @@
         "grunt-contrib-jshint": "^3.2.0",
         "grunt-contrib-nodeunit": "^4.0.0",
         "grunt-contrib-uglify": "^5.2.2",
-        "grunt-shell": "^4.0.0"
+        "typescript": "^4.9.3"
     },
     "dependencies": {
-        "grunt-cli": "^1.4.3"
+        "grunt-cli": "^1.4.3",
+        "grunt-ts": "6.0.0-beta.22"
     }
 }

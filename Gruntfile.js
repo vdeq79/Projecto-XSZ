@@ -1,12 +1,16 @@
 module.exports = function(grunt) {
-	grunt.loadNpmTasks('grunt-shell');
+	grunt.loadNpmTasks('grunt-ts');
     grunt.initConfig({
-        shell:{
+        ts:{
             check:{
-                command: 'deno check ./src/*.ts'
+                src:["src/*.ts"],
+                options:{
+                    noEmit: true,
+                    sourceMap: false
+                }
             }
         }
     });
 
-    grunt.registerTask('check', 'check code' , ['shell']);
+    grunt.registerTask('check', 'check code' , ['ts']);
 };

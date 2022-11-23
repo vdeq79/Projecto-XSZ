@@ -14,6 +14,7 @@ let anime = new Anime({'English': 'Demon Slayer'},
                         "Finished",
                         ["Action"],
                         2001,
-                        Status.ended)
+                        Status.ended,
+                        ["Mappa"])
 
 let list = new UserList([anime])

@@ -12,7 +12,8 @@ export class Anime{
     status: string; //En emisión, finalizado, etc.
     genres: string[]; //Action, Fantasy, etc
     year: number; // Año de lanzamiento
-    status_interest: Status // Status el anime respecto al usuario
+    status_interest: Status; // Status el anime respecto al usuario
+    studios: string[]; // Estudios que animan el anime
 
     constructor(
         titles: {[language:string]: string},
@@ -21,7 +22,8 @@ export class Anime{
         status: string,
         genres: string[],
         year: number,
-        status_interest: Status
+        status_interest: Status,
+        studios: string[]
     ){
         this.titles = titles; //Títulos en distintos idiomas
         this.episodes = episodes; //Num episodios
@@ -30,6 +32,7 @@ export class Anime{
         this.genres = genres; //Action, Fantasy, etc
         this.year = year; // Año de lanzamiento
         this.status_interest = status_interest // Status del anime respecto al usuario
+        this.studios = studios // Estudio animador
     }
 }
 
@@ -39,4 +42,5 @@ let anime = new Anime({'English': 'Demon Slayer'},
                         "Finished",
                         ["Action"],
                         2001,
-                        Status.ended)
+                        Status.ended,
+                        ["Mappa"])

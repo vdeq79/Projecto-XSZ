@@ -6,3 +6,5 @@ entidad:
 automatizar:
   fichero: Gruntfile.js
   orden: grunt
+
+test: tests/pattern_test.ts

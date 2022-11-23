@@ -26,3 +26,8 @@ Para el chequeo del sintaxis de los archivos ts de la carpeta src se utilizará:
 ```shell
 grunt check
 ```
+## Orden de test
+Para el ejecutar los test de la carpeta tests se utilizará:
+```shell
+grunt test
+```

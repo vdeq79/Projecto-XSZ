@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import { expect } from 'chai';
 import { describe, it } from 'mocha';
 import { AnimeType } from '../src/models/anime_type'; 
 import { Status } from '../src/models/status';

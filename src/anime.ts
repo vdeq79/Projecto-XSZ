@@ -1,12 +1,17 @@
+export enum Status{
+    watching="watching",
+    ended="ended",
+    pending="pending",
+    abandoned="abandoned"
+}
+
 export class Anime{
     titles: {[type:string]: string}; //Títulos en distintos idiomas
-    synopsis: string; //Sinopsis
     episodes: number; //Num episodios
     type: string; //TV, OVA, Film, ...
     status: string; //En emisión, finalizado, etc.
     genres: string[]; //Action, Fantasy, etc
     year: number; // Año de lanzamiento
-    broadcast: Date; //Día de la semana que se lanza.
 
     constructor(
         titles: {[language:string]: string},

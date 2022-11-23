@@ -2,7 +2,6 @@ import { Anime } from "./anime";
 import { AnimeType } from "./anime_type";
 import { Status } from "./status";
 import { UserList } from "./user_list";
-import { WatchingStatus } from "./watching_status";
 
 export class AnimePattern{
     episodePattern: number[];
@@ -22,7 +21,7 @@ export class AnimePattern{
         this.studiosPattern = this.findStudiosPattern(userList.animesUser, minFrequency);
     }
 
-    findEpisodePattern(animes:Anime[], minFrequency:number):number[]{
+    private findEpisodePattern(animes:Anime[], minFrequency:number):number[]{
 
         var summary: Record<number,number> = {};
         animes.map(anime=>{
@@ -32,7 +31,7 @@ export class AnimePattern{
         return this.findPattern(summary,minFrequency,parseInt);
     }
 
-    findTypePattern(animes:Anime[], minFrequency:number):AnimeType[]{
+    private findTypePattern(animes:Anime[], minFrequency:number):AnimeType[]{
 
         var summary: Record<AnimeType,number>={tv:0,movie:0,ova:0,special:0,ona:0,music:0};
         animes.forEach(anime=>{
@@ -43,7 +42,7 @@ export class AnimePattern{
     }
 
 
-    findStatusPattern(animes:Anime[], minFrequency:number):Status[]{
+    private findStatusPattern(animes:Anime[], minFrequency:number):Status[]{
         var summary: Record<Status,number> = {Airing:0, Complete:0};
         animes.forEach(anime=>{
             summary[anime.status]++;
@@ -52,7 +51,7 @@ export class AnimePattern{
         return this.findPattern(summary,minFrequency);
     }
 
-    findGenresPattern(animes:Anime[], minFrequency:number):string[]{
+    private findGenresPattern(animes:Anime[], minFrequency:number):string[]{
         var summary: Record<string,number> = {};
         animes.map(anime=>{
             anime.genres.map(genre=>{
@@ -63,7 +62,7 @@ export class AnimePattern{
         return this.findPattern(summary,minFrequency);
     }
 
-    findYearPattern(animes:Anime[],minFrequency:number):number[]{
+    private findYearPattern(animes:Anime[],minFrequency:number):number[]{
         var summary: Record<number,number> = {};
         animes.map(anime=>{
             summary[anime.year] = summary[anime.year]==undefined ? anime.watchingStatus:summary[anime.year]+anime.watchingStatus;
@@ -72,7 +71,7 @@ export class AnimePattern{
         return this.findPattern(summary,minFrequency,parseInt);
     }
 
-    findStudiosPattern(animes:Anime[], minFrequency:number):string[]{
+    private findStudiosPattern(animes:Anime[], minFrequency:number):string[]{
         var summary: Record<string,number> = {};
         animes.map(anime=>{
             anime.studios.map(studio=>{
@@ -85,7 +84,7 @@ export class AnimePattern{
 
 
     //Función genérica para encontrar el patrón a partir de un diccionario con las frecuencias y un valor de frecuencia mínima
-    findPattern(summary:Record<any,number>,minFrequency:number, convertFunction?:Function):any[]{
+    private findPattern(summary:Record<any,number>,minFrequency:number, convertFunction?:Function):any[]{
 
         var keyPattern = Object.keys(summary).filter(i=>{
             let key = convertFunction==undefined? i : convertFunction(i);

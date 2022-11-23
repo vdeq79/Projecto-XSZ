@@ -1,4 +1,4 @@
-import { Anime } from "./anime.ts"
+import { Anime, Status } from "./anime.ts"
 
 class UserList{
     animesUser: Anime[];
@@ -13,6 +13,7 @@ let anime = new Anime({'English': 'Demon Slayer'},
                         "TV",
                         "Finished",
                         ["Action"],
-                        2001)
+                        2001,
+                        Status.ended)
 
 let list = new UserList([anime])

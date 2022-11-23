@@ -31,7 +31,8 @@ export class Anime{
         this.status = status //En emisión, finalizado, etc.
         this.genres = genres; //Action, Fantasy, etc
         this.year = year; // Año de lanzamiento
-        this.status_interest = status_interest // Status del anime respecto al usuario
-        this.studios = studios // Estudio animador
+        this.status_interest = status_interest; // Status del anime respecto al usuario
+        this.studios = studios; // Estudio animador
     }
 }
+

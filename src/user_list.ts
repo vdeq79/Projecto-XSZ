@@ -1,4 +1,4 @@
-import { Anime, Status } from "./anime.ts"
+import { Anime } from "./anime"
 
 class UserList{
     animesUser: Anime[];

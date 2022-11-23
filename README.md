@@ -19,6 +19,8 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 
 [Gestor de tareas](docs/documentations/gestor-de-tareas.md)
 
+[Test runner](docs/documentations/test-runner.md)
+
 ## Orden de chequeo
 Para el chequeo del sintaxis de los archivos ts de la carpeta src se utilizará:
 ```shell

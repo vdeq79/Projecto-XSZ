@@ -22,12 +22,12 @@ Atendiendo a lo puesto en [#3](https://github.com/vdeq79/Projecto-XSZ/issues/3),
 ## Análisis elección Objeto Valor
 Por otro lado para el objeto valor se ha considerado únicamente Anime, que con los atributos necesario debe cumplir las necesidades de [#3](https://github.com/vdeq79/Projecto-XSZ/issues/3), [#4](https://github.com/vdeq79/Projecto-XSZ/issues/4) y [#5](https://github.com/vdeq79/Projecto-XSZ/issues/5). Por lo discutido en #15 se han considerado los siguientes atritubutos:
 - Title: se recoje el título en un objeto de tipo diccionario que contendra el idioma del título y el título en dicho idioma.
-- Synopsis: se trata de una descripción del anime en cuestión.
 - Type: un anime puede ser una serie, una película, un especial, etc.
 - Status: terminado, en emisión, cancelado,...
 - Generos: cada anime tendrá asociado uno o varios géneros que posteriormente se podrán usar para crear un perfil de gustos del usuario
 - Year: año de lanzamiento del anime
-- Broadcast: fecha de salida (día de la semana) de cada episodio. Generalmente, los animes se suelen emitir un día fijo de la semana, aunque se pueden producir variacioens por vacaciones u otros motivos.
+- Studios.
+- Status Interest.
 
 Se puede encontrar una discusión de la elección de los atributos en [#15](https://github.com/vdeq79/Projecto-XSZ/issues/15).
 

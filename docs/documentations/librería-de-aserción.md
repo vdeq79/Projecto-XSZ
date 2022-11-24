@@ -5,4 +5,4 @@ Para la librería de aserción, el criterio de elección se centra principalment
 - [**Chai**](https://www.chaijs.com/): librería de aserción BDD/TDD popular y extendida, proporciona un sintaxis natural  que ayuda a la generación de los tests. Se encuentra actualizada con el último commit realizado hace tan sólo 12 días.
 - [**Unexpected**](https://unexpected.js.org): librería de aserción BDD que también utiliza la sintaxis _expect_, es menos conocida que las dos opciones anteriores pero se encuentra en mantenimiento con el último commit realizada en el octubre de este año.
 
-Dada las opciones anteriores, optamos por la elección de **Chai** por ser el más actualizado.
+Dada las opciones anteriores, optamos por la elección de **Chai** por ser la más actualizado.

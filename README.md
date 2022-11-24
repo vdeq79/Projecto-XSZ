@@ -21,6 +21,8 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 
 [Test runner](docs/documentations/test-runner.md)
 
+[Librería de aserción](docs/documentations/librería-de-aserción.md)
+
 ## Orden de chequeo
 Para el chequeo del sintaxis de los archivos ts de la carpeta src se utilizará:
 ```shell

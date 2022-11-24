@@ -5,7 +5,7 @@ import { Status } from '../src/models/status';
 import { Anime } from '../src/models/anime';
 import { UserList } from '../src/models/user_list';
 import { WatchingStatus } from '../src/models/watching_status';
-import { AnimePattern } from '../src/models/anime_pattern';
+import { AnimePattern } from '../src/logic/anime_pattern';
 
 describe('User anime pattern test', ()=>{
     

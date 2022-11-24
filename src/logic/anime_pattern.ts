@@ -1,7 +1,6 @@
-import { Anime } from "./anime";
-import { AnimeType } from "./anime_type";
-import { Status } from "./status";
-import { UserList } from "./user_list";
+import { AnimeType } from "../models/anime_type";
+import { Status } from "../models/status";
+import { UserList } from "../models/user_list";
 
 export class AnimePattern{
     episodePattern: number[];
@@ -12,79 +11,45 @@ export class AnimePattern{
     studiosPattern: string[];
 
     constructor(userList:UserList){
+        //Mínimo de frecuencia admitida
         var minFrequency:number = Math.floor(userList.animesUser.length/2);
-        this.episodePattern = this.findEpisodePattern(userList.animesUser, minFrequency);
-        this.typePattern = this.findTypePattern(userList.animesUser,minFrequency);
-        this.statusPattern = this.findStatusPattern(userList.animesUser, minFrequency);
-        this.genresPattern = this.findGenresPattern(userList.animesUser, minFrequency);
-        this.yearPattern = this.findYearPattern(userList.animesUser,minFrequency);
-        this.studiosPattern = this.findStudiosPattern(userList.animesUser, minFrequency);
-    }
 
-    private findEpisodePattern(animes:Anime[], minFrequency:number):number[]{
+        //Generación de los conjuntos con un elemento con sus correspondientes frecuencias
+        var episodesSummary: Record<number,number>={};
+        var yearSummary: Record<number,number> = {};
+        var typeSummary: Record<AnimeType,number>={tv:0,movie:0,ova:0,special:0,ona:0,music:0};
+        var statusSummary: Record<Status,number> = {Airing:0, Complete:0};
+        var genresSummary: Record<string,number>={};
+        var studiosSummary: Record<string,number> = {};
 
-        var summary: Record<number,number> = {};
-        animes.map(anime=>{
-            summary[anime.episodes] = summary[anime.episodes]==undefined ? anime.watchingStatus:summary[anime.episodes]+anime.watchingStatus;
-        });
+        userList.animesUser.map(anime=>{
+            episodesSummary[anime.episodes] = episodesSummary[anime.episodes]==undefined ? anime.watchingStatus:episodesSummary[anime.episodes]+anime.watchingStatus;
 
-        return this.findPattern(summary,minFrequency,parseInt);
-    }
+            typeSummary[anime.type]++;
+            statusSummary[anime.status]++;
 
-    private findTypePattern(animes:Anime[], minFrequency:number):AnimeType[]{
-
-        var summary: Record<AnimeType,number>={tv:0,movie:0,ova:0,special:0,ona:0,music:0};
-        animes.forEach(anime=>{
-            summary[anime.type]++;
-        });
-        
-        return this.findPattern(summary,minFrequency);
-    }
-
-
-    private findStatusPattern(animes:Anime[], minFrequency:number):Status[]{
-        var summary: Record<Status,number> = {Airing:0, Complete:0};
-        animes.forEach(anime=>{
-            summary[anime.status]++;
-        });
-
-        return this.findPattern(summary,minFrequency);
-    }
-
-    private findGenresPattern(animes:Anime[], minFrequency:number):string[]{
-        var summary: Record<string,number> = {};
-        animes.map(anime=>{
             anime.genres.map(genre=>{
-                summary[genre] = summary[genre]==undefined ? anime.watchingStatus:summary[genre]+anime.watchingStatus;
+                genresSummary[genre] = genresSummary[genre]==undefined ? anime.watchingStatus:genresSummary[genre]+anime.watchingStatus;
             })
-        });
 
-        return this.findPattern(summary,minFrequency);
-    }
+            yearSummary[anime.year] = yearSummary[anime.year]==undefined ? anime.watchingStatus:yearSummary[anime.year]+anime.watchingStatus;
 
-    private findYearPattern(animes:Anime[],minFrequency:number):number[]{
-        var summary: Record<number,number> = {};
-        animes.map(anime=>{
-            summary[anime.year] = summary[anime.year]==undefined ? anime.watchingStatus:summary[anime.year]+anime.watchingStatus;
-        });
-
-        return this.findPattern(summary,minFrequency,parseInt);
-    }
-
-    private findStudiosPattern(animes:Anime[], minFrequency:number):string[]{
-        var summary: Record<string,number> = {};
-        animes.map(anime=>{
             anime.studios.map(studio=>{
-                summary[studio] = summary[studio]==undefined ? anime.watchingStatus:summary[studio]+anime.watchingStatus;
+                studiosSummary[studio] = studiosSummary[studio]==undefined ? anime.watchingStatus:studiosSummary[studio]+anime.watchingStatus;
             })
         });
 
-        return this.findPattern(summary,minFrequency);
+        this.episodePattern = this.extractPattern(episodesSummary, minFrequency, parseInt);
+        this.typePattern = this.extractPattern(typeSummary,minFrequency);
+        this.statusPattern = this.extractPattern(statusSummary, minFrequency);
+        this.genresPattern = this.extractPattern(genresSummary, minFrequency);
+        this.yearPattern = this.extractPattern(yearSummary,minFrequency,parseInt);
+        this.studiosPattern = this.extractPattern(studiosSummary, minFrequency);
     }
 
 
-    //Función genérica para encontrar el patrón a partir de un diccionario con las frecuencias y un valor de frecuencia mínima
-    private findPattern(summary:Record<any,number>,minFrequency:number, convertFunction?:Function):any[]{
+    //Función genérica para extraer los elementos frecuentes a partir de un diccionario con las frecuencias y un valor de frecuencia mínima
+    private extractPattern(summary:Record<any,number>, minFrequency:number, convertFunction?:Function):any[]{
 
         var keyPattern = Object.keys(summary).filter(i=>{
             let key = convertFunction==undefined? i : convertFunction(i);

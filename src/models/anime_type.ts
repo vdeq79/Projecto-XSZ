@@ -2,7 +2,7 @@ export enum AnimeType{
     tv = "tv",
     movie = "movie",
     ova = "ova",
-    specia = "special",
+    special = "special",
     ona = "ona",
     music = "music"    
 }

@@ -1,11 +1,11 @@
 import { expect } from 'chai';
 import { describe, it } from 'mocha';
-import { AnimeType } from '../src/models/anime_type'; 
-import { Status } from '../src/models/status';
-import { Anime } from '../src/models/anime';
-import { UserList } from '../src/models/user_list';
-import { WatchingStatus } from '../src/models/watching_status';
-import { AnimePattern } from '../src/logic/anime_pattern';
+import { AnimeType } from '../src/anime_type'; 
+import { Status } from '../src/status';
+import { Anime } from '../src/anime';
+import { UserList } from '../src/user_list';
+import { WatchingStatus } from '../src/watching_status';
+import { AnimePattern } from '../src/anime_pattern';
 
 describe('User anime pattern test', ()=>{
     

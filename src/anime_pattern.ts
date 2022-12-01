@@ -1,6 +1,6 @@
-import { AnimeType } from "../models/anime_type";
-import { Status } from "../models/status";
-import { UserList } from "../models/user_list";
+import { AnimeType } from "./anime_type";
+import { Status } from "./status";
+import { UserList } from "./user_list";
 
 export class AnimePattern{
     episodePattern: number[];

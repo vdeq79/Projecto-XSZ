@@ -3,7 +3,7 @@ import { Status } from "./status";
 import { AnimeType } from "./anime_type";
 
 export class Anime{
-    titles: {[type:string]: string};                //Títulos en distintos idiomas
+    titles: {[language:string]: string};                //Títulos en distintos idiomas
     episodes: number;                               //Num episodios
     type: AnimeType;                                //TV, OVA, Film, ...
     status: Status;                                 //En emisión, finalizado, etc.

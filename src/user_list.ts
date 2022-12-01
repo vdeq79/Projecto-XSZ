@@ -1,6 +1,6 @@
 import { Anime } from "./anime"
 
-class UserList{
+export class UserList{
     animesUser: Anime[];
 
     constructor(animesUser:Anime[]){

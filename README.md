@@ -19,8 +19,17 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 
 [Gestor de tareas](docs/documentations/gestor-de-tareas.md)
 
+[Test runner](docs/documentations/test-runner.md)
+
+[Librería de aserción](docs/documentations/librería-de-aserción.md)
+
 ## Orden de chequeo
 Para el chequeo del sintaxis de los archivos ts de la carpeta src se utilizará:
 ```shell
 grunt check
+```
+## Orden de test
+Para el ejecutar los test de la carpeta tests se utilizará:
+```shell
+grunt test
 ```

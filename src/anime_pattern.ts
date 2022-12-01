@@ -13,28 +13,32 @@ export class AnimePattern{
         //Generación de los conjuntos con un elemento con sus correspondientes frecuencias
         var patternSummary: Record<(number|AnimeType|Status|string),number>={};
 
+        //Para cada anime, primero extraemos los atributos significativos
         userList.animesUser.map(anime=>{
-            patternSummary[anime.episodes] = patternSummary[anime.episodes]==undefined ? anime.watchingStatus:patternSummary[anime.episodes]+anime.watchingStatus;
 
-            patternSummary[anime.type] = patternSummary[anime.type]==undefined ? anime.watchingStatus:patternSummary[anime.type]+anime.watchingStatus;
-
-            patternSummary[anime.status] = patternSummary[anime.status]==undefined ? anime.watchingStatus:patternSummary[anime.status]+anime.watchingStatus;;
+            this.addPattern(patternSummary,anime.episodes, anime.watchingStatus);
+            this.addPattern(patternSummary,anime.type,     anime.watchingStatus);
+            this.addPattern(patternSummary,anime.status,   anime.watchingStatus);
+            this.addPattern(patternSummary,anime.year,     anime.watchingStatus);
 
             anime.genres.map(genre=>{
-                patternSummary[genre] = patternSummary[genre]==undefined ? anime.watchingStatus:patternSummary[genre]+anime.watchingStatus;
-            })
-
-            patternSummary[anime.year] = patternSummary[anime.year]==undefined ? anime.watchingStatus:patternSummary[anime.year]+anime.watchingStatus;
+                this.addPattern(patternSummary,genre,anime.watchingStatus);
+            });
 
             anime.studios.map(studio=>{
-                patternSummary[studio] = patternSummary[studio]==undefined ? anime.watchingStatus:patternSummary[studio]+anime.watchingStatus;
-            })
+                this.addPattern(patternSummary,studio,anime.watchingStatus);
+            });
+
         });
 
         //Filtramos los conjuntos descartando los que no tienen una frecuencia mínima
         this.definedPattern = Object.keys(patternSummary).filter(i=>{
             return patternSummary[i]>=minFrequency;
         })
+    }
+
+    private addPattern(summary:Record<(number|AnimeType|Status|string),number>, pattern: (number|AnimeType|Status|string), value:number){
+        summary[pattern] = summary[pattern]==undefined ? value:summary[pattern]+value;
     }
 
 }

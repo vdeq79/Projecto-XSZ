@@ -26,24 +26,23 @@ describe('User anime pattern test', ()=>{
         const userList = new UserList([AOT,Kimetsu,OPM,JJK,CSM]);
         const userAnimePattern = new AnimePattern(userList);
 
-        expect(userAnimePattern.genresPattern).to.contain('Action');
-        expect(userAnimePattern.genresPattern).to.contain('Shounen');
-        expect(userAnimePattern.episodePattern).to.contain(12);
-        expect(userAnimePattern.typePattern).to.contain(AnimeType.tv);
-        expect(userAnimePattern.studiosPattern).to.contain('MAPPA');
-        expect(userAnimePattern.yearPattern).to.be.empty;
+        expect(userAnimePattern.definedPattern).to.contain('Action');
+        expect(userAnimePattern.definedPattern).to.contain('Shounen');
+        expect(userAnimePattern.definedPattern).to.contain('12');
+        expect(userAnimePattern.definedPattern).to.contain(AnimeType.tv);
+        expect(userAnimePattern.definedPattern).to.contain('MAPPA');
+        expect(userAnimePattern.definedPattern).to.not.contain(Status.airing);
     });
 
     it('test with user with less defined pattern',()=>{
         const userList = new UserList([Edgerunners, Kimetsu, OPM, JJK, CSM, Mob, Pop, Bakemonogatari, AoButa, newWorld, KnK]);
         const userAnimePattern = new AnimePattern(userList);
 
-        expect(userAnimePattern.genresPattern).to.contain('Action');
-        expect(userAnimePattern.genresPattern).to.not.contain('Vampire');
-        expect(userAnimePattern.typePattern).to.contain(AnimeType.tv);
-        expect(userAnimePattern.typePattern).to.not.contain(AnimeType.ona);
-        expect(userAnimePattern.typePattern).to.contain(AnimeType.tv);
-        expect(userAnimePattern.studiosPattern).to.be.empty;
+        expect(userAnimePattern.definedPattern).to.contain('Action');
+        expect(userAnimePattern.definedPattern).to.not.contain('Vampire');
+        expect(userAnimePattern.definedPattern).to.contain(AnimeType.tv);
+        expect(userAnimePattern.definedPattern).to.not.contain(AnimeType.ona);
+        expect(userAnimePattern.definedPattern).to.not.contain('A-1 Pictures');
     })
 
 });

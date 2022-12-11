@@ -23,6 +23,8 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 
 [Librería de aserción](docs/documentations/librería-de-aserción.md)
 
+[Imagen base](docs/documentations/imagen-base.md)
+
 ## Orden de chequeo
 Para el chequeo del sintaxis de los archivos ts de la carpeta src se utilizará:
 ```shell

@@ -15,4 +15,4 @@ RUN pnpm install
 
 RUN chown -R 1001:1001 /app
 
-ENTRYPOINT [ "grunt", "test" ]
+CMD [ "grunt", "test" ]

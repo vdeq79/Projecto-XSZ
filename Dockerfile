@@ -15,6 +15,8 @@ RUN pnpm install
 #node es el usuario genérico de la imagen base
 RUN chown -R node /app /.pnpm
 
+#Cambiar el usuario de la imagen
+USER node
 
 ENTRYPOINT [ "grunt" ]
 #Default task

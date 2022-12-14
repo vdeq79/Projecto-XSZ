@@ -9,12 +9,13 @@ COPY package.json /app
 ENV PNPM_HOME="/.pnpm"
 ENV PATH="${PATH}:${PNPM_HOME}"
 
-RUN npm install --global pnpm
-RUN pnpm install -g grunt-cli
+RUN npm install --global pnpm && pnpm install -g grunt-cli
 RUN pnpm install
 
-RUN chown -R 1001 /app
-RUN chown -R 1001 /.pnpm
+#node es el usuario genérico de la imagen base
+RUN chown -R node /app /.pnpm
 
 
-CMD [ "grunt", "test" ]
+ENTRYPOINT [ "grunt" ]
+#Default task
+CMD [ "test" ]

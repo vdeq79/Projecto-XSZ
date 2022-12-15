@@ -5,12 +5,12 @@ Para la elección de la imagen base siguiendo las mejores prácticas, los criter
 - Tamaño de la imagen,  cuando menor sea el tamaño menos espacio necesitamos para almacenarla y los procesos de pull y push serán más rápidos.
 - Tener las herramientas que necesitamos y actualizadas, principalmente node y npm (o preferiblemente pnpm) para ejecutar Typescript y descargar dependencias.
 
-Siguiendo las buenas prácticas, usaremos la imagen oficial de [**node**](https://hub.docker.com/_/node), pero teniendo en cuenta que tenemos distintas versiones nos centramos principalmente en dos:
+Siguiendo las buenas prácticas, usaremos la imagen oficial de [**node**](https://hub.docker.com/_/node), pero teniendo en cuenta que tenemos distintas versiones nos centramos principalmente en:
 - **latest**: es la versión última inestable de node, tiene más tendencia a cambios y puede causar comportamientos impredecibles.
 - **lts**: versión estable que también se actualiza, pero con un ritmo menor que latest, actualmente utiliza la versión 18.12.1.
 - **Versiones concretas**: versiones concretas de node como puede ser 14, 16 o 18. Ideal si podemos asegurar que nuestro código siempre se ejecutará en el mismo entorno.
 
-Se decide utilizar la versión **lts** porque mantiene una versión estable para las ejecuciones y también nos permite adaptar nuestro código a las actualizaciones en caso de no funcionar en nuevas versiones.   
+Se decide utilizar la versión **lts** porque mantiene una versión estable para las ejecuciones y también nos alerta de que necesitamos modificar nuestro código en caso de no funcionar en nuevas versiones.   
 
 Para minimizar el tamaño se ha descargado la imagen con diferentes distribuciones de sistema operativo para comparar:
 

@@ -1,0 +1,25 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.3
+
+jobs:
+  test:
+    steps:
+      - checkout
+      - run: sudo npm install --global pnpm grunt-cli
+      - node/install-packages:
+        override-ci-command: pnpm install
+      - run: grunt test
+
+workflows:
+  matrix-tests:
+    jobs:
+      - test:
+        matrix:
+          parameters:
+            version:
+              - 14
+              - 16
+              - 18
+              - latest

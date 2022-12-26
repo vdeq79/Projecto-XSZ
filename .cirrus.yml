@@ -1,0 +1,12 @@
+task:
+  container:
+    image: node:latest
+
+  node_modules_cache:
+    folder: node_modules_cache
+    fingerprint_script: 
+      - npm install --global pnpm grunt-cli
+      - pnpm setup
+    populate_script: pnpm install
+
+  test_script: grunt test

@@ -1,0 +1,25 @@
+version: v1.0
+
+name: Semaphore CI
+
+agent:
+  machine:
+    type: e1-standard-2
+    os_image: ubuntu1804
+
+blocks:
+  - name: tests
+    task:
+      prologue:
+        commands:
+          - checkout
+          - npm install --global pnpm grunt-cli
+          - pnpm install
+      jobs:
+      - name: node test
+        matrix:
+          - env_var: NODE_VERSION
+            values: ['14', '16', '18', 'latest']
+        commands:
+          - sem-version node $NODE_VERSION
+          - grunt test

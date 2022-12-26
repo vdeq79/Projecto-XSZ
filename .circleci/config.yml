@@ -6,9 +6,14 @@ orbs:
 jobs:
   test_app:
     executor: node/default
+    parameters:
+      node-version:
+        type: string
     steps:
       - checkout
-      - run: sudo npm install --global pnpm grunt-cli
+      - node/install:
+          node-version: << parameters.node-version >>        
+      - run: npm install --global pnpm grunt-cli
       - node/install-packages:
           override-ci-command: pnpm install
       - run: grunt test
@@ -19,8 +24,4 @@ workflows:
       - test_app:
         matrix:
           parameters:
-            version:
-              - 14
-              - 16
-              - 18
-              - latest
+            node-version: [14,16,18,latest]

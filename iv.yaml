@@ -10,3 +10,4 @@ automatizar:
 test: tests/pattern_test.ts
 CI:
   - .github/workflows/CI-test.yml
+  - .semaphore/semaphore.yml

@@ -2,6 +2,9 @@ name: project CI
 
 on:
   push:
+    path-ignore:
+      - 'docs/**'
+      - 'README.md'
 
 jobs:
   build:

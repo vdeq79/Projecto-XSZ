@@ -19,8 +19,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install dependencies
         run: |
-        npm install --global pnpm grunt-cli
-        pnpm setup
-        pnpm install 
+          npm install --global pnpm grunt-cli
+          pnpm setup
+          pnpm install 
       - name: Run tests
         run: grunt test

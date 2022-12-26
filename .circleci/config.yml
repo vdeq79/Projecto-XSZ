@@ -22,6 +22,6 @@ workflows:
   matrix-tests:
     jobs:
       - test_app:
-        matrix:
-          parameters:
-            node-version: ["14","16","18","latest"]
+          matrix:
+            parameters:
+              node-version: ["14.17.6", "16.9.0"]

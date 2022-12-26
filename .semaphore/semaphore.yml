@@ -8,18 +8,14 @@ agent:
     os_image: ubuntu2004
 
 blocks:
-  - name: tests
+  - name: test
+    run:
+      when: "change_in('/', {exclude: ['/docs', 'README.md']})"
     task:
-      prologue:
+      jobs:
+      - name: test docker
         commands:
           - checkout
-      jobs:
-      - name: node test
-        matrix:
-          - env_var: NODE_VERSION
-            values: ['14', '16', '18', 'latest']
-        commands:
-          - nvm use $NODE_VERSION
-          - npm install --global pnpm grunt-cli
-          - pnpm install
-          - grunt test
+          - docker pull vdeq79/projecto-xsz:latest
+          - docker run -u 1001 -t -v `pwd`:/app/test vdeq79/projecto-xsz:latest
+

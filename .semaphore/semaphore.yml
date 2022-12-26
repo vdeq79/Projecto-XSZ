@@ -10,7 +10,7 @@ agent:
 blocks:
   - name: test
     run:
-      when: "change_in('/', {exclude: ['/docs', 'README.md']})"
+      when: "change_in('/', {exclude: ['/docs', 'README.md'], default_branch: 'main'}})"
     task:
       jobs:
       - name: test docker

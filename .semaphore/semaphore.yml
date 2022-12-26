@@ -5,7 +5,7 @@ name: Semaphore CI
 agent:
   machine:
     type: e1-standard-2
-    os_image: ubuntu1804
+    os_image: ubuntu2004
 
 blocks:
   - name: tests
@@ -13,8 +13,6 @@ blocks:
       prologue:
         commands:
           - checkout
-          - npm install --global pnpm grunt-cli
-          - pnpm install
       jobs:
       - name: node test
         matrix:
@@ -22,4 +20,6 @@ blocks:
             values: ['14', '16', '18', 'latest']
         commands:
           - sem-version node $NODE_VERSION
+          - npm install --global pnpm grunt-cli
+          - pnpm install
           - grunt test

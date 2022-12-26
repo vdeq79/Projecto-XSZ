@@ -1,7 +1,0 @@
-task:
-  container:
-    image: ubuntu:latest  #latest LTS
-
-  test_script: 
-    - docker pull vdeq79/projecto-xsz:latest
-    - docker run -u 1001 -t -v `pwd`:/app/test vdeq79/projecto-xsz

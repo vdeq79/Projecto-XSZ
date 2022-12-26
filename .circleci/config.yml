@@ -5,10 +5,10 @@ orbs:
 
 jobs:
   test_app:
-    executor: node/default
     parameters:
       node-version:
         type: string
+    executor: node/default
     steps:
       - checkout
       - node/install:

@@ -5,6 +5,7 @@ orbs:
 
 jobs:
   test_app:
+    executor: node/default
     steps:
       - checkout
       - run: sudo npm install --global pnpm grunt-cli

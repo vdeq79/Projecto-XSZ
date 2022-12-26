@@ -4,7 +4,7 @@ orbs:
   node: circleci/node@5.0.3
 
 jobs:
-  test:
+  test_app:
     steps:
       - checkout
       - run: sudo npm install --global pnpm grunt-cli
@@ -15,7 +15,7 @@ jobs:
 workflows:
   matrix-tests:
     jobs:
-      - test:
+      - test_app:
         matrix:
           parameters:
             version:

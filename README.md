@@ -25,6 +25,8 @@ Apartir de la lista de animes proporcionado por el usuario, aplicando el algorit
 
 [Imagen base](docs/documentations/imagen-base.md)
 
+[Integración continua](docs/documentations/integración-continua.md)
+
 ## Orden de chequeo
 Para el chequeo del sintaxis de los archivos ts de la carpeta src se utilizará:
 ```shell

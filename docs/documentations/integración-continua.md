@@ -11,4 +11,4 @@ Siguiendo estos criterios, consideramos las siguientes opciones:
 - **Semaphore**: es un sistema de integración continua de pago con una versión gratuita para códigos abiertos, está integrado con Github como una aplicación y también soporta Docker. Tiene también una interfaz simple y el sintaxis es fácil de entender.
 - **Cirrus CI**: es un sistema de CI que se instala como una aplicación de Github, su uso es gratuita para repositorios públicos y utiliza las imágenes de Docker para llevar a cabo los tests. Tras probarlo se descarta por el funcionamiento irregular de su página (el repositorio no aparece en la página principal, pero sí es accesible a través de la url).
 
-Tras probar las anteriores opciones, se decide utilizar Github Actions testear en distintas versiones de node y Semaphore para testear nuestra imagen de Docker.
+Tras probar las anteriores opciones, se decide utilizar Github Actions testear las distintas versiones de node y Semaphore para testear nuestra imagen de Docker.

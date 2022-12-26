@@ -2,11 +2,13 @@ task:
   container:
     image: node:latest
 
+  env:
+    PNPM_HOME: ${HOME}/pnpm
+    PATH: ${PATH}:${PNPM_HOME}
+
   node_modules_cache:
     folder: node_modules_cache
-    fingerprint_script: 
-      - npm install --global pnpm grunt-cli
-      - pnpm setup
+    fingerprint_script: npm install --global pnpm grunt-cli
     populate_script: pnpm install
 
   test_script: grunt test
